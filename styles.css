@@ -1,0 +1,156 @@
+.largest-container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+/* nav {
+    display: flex;
+    flex-direction: column;
+     */
+/* } */
+
+h3 {
+    flex-direction: column;
+    font-family: "Open Sans";
+    /* margin-bottom: 4px; */
+    font-weight: bold;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black; 
+    font-family: "Open Sans";
+    margin: 2px 8px 8px 2px;
+}
+
+.hire-button {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 25px 10px 25px;
+}
+
+h2 {
+    font-family: "Open Sans";
+    font-weight: bold;
+}
+
+p {
+    font-family: "Open Sans";
+    border-left: 1.5px solid #69696a;
+    padding-left: 10px;
+    width: 80%;
+    flex-wrap: wrap
+    }
+
+.scroll-button {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px 25px 10px 25px;
+}
+/* could not set the scroll button to be fixed without ruining its centered formatting (pushed left). 
+Christopher and I talked to Carly about this and intructed to comment. */
+
+@media only screen and (min-width: 650px) 
+{
+    
+    
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
+    .hire-button {
+        border: 10px;
+        border-left: 20px;
+        border-right: 20px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        padding: 8px 25px 8px 25px;
+    }
+    .middle-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .explanatory-container{
+        flex: 50%;    
+    }
+    .circle-container {
+        position: relative;
+        flex: 50%;
+        padding-top: 70px;
+        padding-left: 100px;
+    }
+    
+    .red-circle {
+        position: absolute;
+        background: rgba(247, 136, 167, 0.6);
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        left: 40%;
+    }
+    
+    .yellow-circle {
+        position: absolute;
+        background: rgba(247, 193, 162, 0.7);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        top: 135%;
+        left: 70%;
+    }
+    
+    .purple-circle {
+        position: absolute;
+        float: right;
+        background: rgba(207, 130, 213, 0.6);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        top: 65%;
+        left: 80%;
+    }
+
+    .scroll-button {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 230px; 
+    }
+}
+
